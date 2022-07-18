@@ -21,11 +21,6 @@ struct ContentView: View {
                         .navigationTitle("Dynamic list - ForEach")
                 }
                 
-                NavigationLink("Dynamic list - ForEachWithSections") {
-                    DynamicList_ForEachWithSections()
-                        .navigationTitle("Dynamic list - ForEachWithSections")
-                }
-                
                 NavigationLink("Dynamic list - ScrollTo") {
                     DynamicList_ScrollTo()
                         .navigationTitle("Dynamic list - ScrollTo")

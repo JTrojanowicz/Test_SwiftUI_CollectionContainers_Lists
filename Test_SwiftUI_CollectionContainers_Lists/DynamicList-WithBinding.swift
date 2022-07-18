@@ -10,22 +10,30 @@
 import SwiftUI
 
 struct DynamicList_WithBinding: View {
-    @State private var collection = [String()]
+    @State private var elementsIdentifiable = [Element()] // NOTICE: Lists with binding can work with Identifiable arrays but I've noticed that there is some problem with non-identifiable arrays (eg. TextField was loosing focus after writing the first letter)
     
     var body: some View {
         // NOTICE: the bindings of the collection of elements in the Lists were introduced in SwiftUI 3 (but it is said that you can back-deploy this code to any release of iOS that supports SwiftUI)
-        List($collection, id: \.self) { $element in
+        List($elementsIdentifiable) { $element in
             VStack(alignment: .leading) {
-                Text("Element name: \(element)")
-                TextField("New name", text: $element) // NOTICE: there is a problem with TextField (loses focus after writing one character --> here you have somewhat similar issue with a workaround (wrapping UIKit UITextField inside SwiftUI): https://stackoverflow.com/questions/63500276/swiftui-textfield-behaves-weirdly-when-i-bind-its-value-cant-type-chinese-occ
+                Text("Element text: \(element.text)")
+                TextField("New text", text: $element.text)
             }
         }
         .toolbar {
             Button("Add") {
-                collection.append(String())
+                elementsIdentifiable.append(Element())
             }
         }
     }
+}
+
+//===============================================================================
+// MARK:       ******* ElementIdentifiable *******
+//===============================================================================
+struct Element: Identifiable {
+    let id = UUID()
+    var text = String()
 }
 
 //===============================================================================

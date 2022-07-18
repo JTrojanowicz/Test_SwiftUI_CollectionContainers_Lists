@@ -8,18 +8,39 @@
 import SwiftUI
 
 struct DynamicList_ForEach: View {
-    @State private var users = ["Paul", "John", "Leon"]
+    @State private var users = ["Paul", "John", "Leon", "Alicja"]
+    @State private var usersIdentifiable = [
+        UserIdentifiable(name: "Patrick"),
+        UserIdentifiable(name: "Sam"),
+        UserIdentifiable(name: "Neo"),
+        UserIdentifiable(name: "Eve"),
+    ]
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(users, id: \.self) { user in
                     Text(user)
-                        .listRowBackground(user == "John" ? Color.green : Color.clear)
+                        .listRowBackground(user == "John" ? Color.green : Color.white)
                         .listRowSeparator(.hidden)
                 }
                 .onMove(perform: move)
                 .onDelete(perform: deleteItem(indexSet:))
+                
+                Section(header: Text("Header"), footer: Text("Footer")) {
+                    ForEach(users, id: \.self) { user in
+                        Text(user)
+                            .listRowBackground(user == "John" ? Color.green : Color.clear)
+                            .listRowSeparator(.hidden)
+                    }
+                    .onMove(perform: move)
+                    .onDelete(perform: deleteItem(indexSet:))
+                }
+                
+                ForEach(usersIdentifiable) { user in
+                    Text(user.name)
+                        .listRowBackground(user.name == "Sam" ? Color.green : Color.clear)
+                }
             }
             .toolbar {
                 EditButton()
@@ -37,7 +58,13 @@ struct DynamicList_ForEach: View {
         }
     }
 }
-
+//===============================================================================
+// MARK:       ******* <#NAME#> *******
+//===============================================================================
+struct UserIdentifiable: Identifiable {
+    let id = UUID()
+    let name: String
+}
 //===============================================================================
 // MARK:       ******* Preview *******
 //===============================================================================

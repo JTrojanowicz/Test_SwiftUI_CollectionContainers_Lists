@@ -20,20 +20,16 @@ struct DynamicList_Identifiable: View {
     ]
     
     var body: some View {
-        List(restaurants) { restaurant in // NOTICE: only arrays of Identifiable elements can be accepted in Lists this way
-            RestaurantRow(restaurant: restaurant)
+        VStack {
+            List(restaurants) { restaurant in // NOTICE: only arrays of Identifiable elements can be accepted in Lists this way
+                Text("Restaurant: \(restaurant.name)")
+            }
+            
+            // Using ForEach puts the view one above the other but this is not a list (eg. it doesn't have rows, styles, etc)
+            ForEach(restaurants) { restaurant in
+                Text(restaurant.name)
+            }
         }
-    }
-}
-
-//===============================================================================
-// MARK:       ******* View Helpers *******
-//===============================================================================
-struct RestaurantRow: View {
-    var restaurant: Restaurant
-    
-    var body: some View {
-        Text("Restaurant: \(restaurant.name)")
     }
 }
 

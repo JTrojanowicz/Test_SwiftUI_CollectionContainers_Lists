@@ -54,6 +54,7 @@ struct StaticList: View {
                 Text("Row 1")
                 Text("Row 2")
             }
+            .listRowSeparator(.hidden)
             
             Section(header: Text("Icreased Prominence Header"), footer: Text("Footer")) {
                 Text("Row 1")
@@ -63,10 +64,10 @@ struct StaticList: View {
         }
 //        .listStyle(.automatic)
 //        .listStyle(.grouped)
-        .listStyle(.insetGrouped)
+//        .listStyle(.insetGrouped)
 //        .listStyle(.plain)
 //        .listStyle(.inset) // very similar to .plain but more moved to the right
-//        .listStyle(.sidebar)
+//        .listStyle(.sidebar) // noticed that when it is .sidebar then sections can be folded
     }
 }
 
