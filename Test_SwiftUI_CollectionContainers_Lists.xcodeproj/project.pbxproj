@@ -11,6 +11,12 @@
 		EFA93BDF288534F00004C260 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA93BDE288534F00004C260 /* ContentView.swift */; };
 		EFA93BE1288534F00004C260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA93BE0288534F00004C260 /* Assets.xcassets */; };
 		EFA93BE4288534F00004C260 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA93BE3288534F00004C260 /* Preview Assets.xcassets */; };
+		EFA93BF2288535FE0004C260 /* DynamicList-WithBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA93BEB288535FE0004C260 /* DynamicList-WithBinding.swift */; };
+		EFA93BF3288535FE0004C260 /* DynamicList-Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA93BEC288535FE0004C260 /* DynamicList-Identifiable.swift */; };
+		EFA93BF4288535FE0004C260 /* DynamicList-ScrollTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA93BED288535FE0004C260 /* DynamicList-ScrollTo.swift */; };
+		EFA93BF5288535FE0004C260 /* StaticList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA93BEE288535FE0004C260 /* StaticList.swift */; };
+		EFA93BF6288535FE0004C260 /* DynamicList-ForEachWithSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA93BEF288535FE0004C260 /* DynamicList-ForEachWithSections.swift */; };
+		EFA93BF7288535FE0004C260 /* DynamicList-ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA93BF0288535FE0004C260 /* DynamicList-ForEach.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		EFA93BDE288534F00004C260 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFA93BE0288534F00004C260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFA93BE3288534F00004C260 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFA93BEB288535FE0004C260 /* DynamicList-WithBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicList-WithBinding.swift"; sourceTree = "<group>"; };
+		EFA93BEC288535FE0004C260 /* DynamicList-Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicList-Identifiable.swift"; sourceTree = "<group>"; };
+		EFA93BED288535FE0004C260 /* DynamicList-ScrollTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicList-ScrollTo.swift"; sourceTree = "<group>"; };
+		EFA93BEE288535FE0004C260 /* StaticList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticList.swift; sourceTree = "<group>"; };
+		EFA93BEF288535FE0004C260 /* DynamicList-ForEachWithSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicList-ForEachWithSections.swift"; sourceTree = "<group>"; };
+		EFA93BF0288535FE0004C260 /* DynamicList-ForEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicList-ForEach.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,12 @@
 		EFA93BDB288534F00004C260 /* Test_SwiftUI_CollectionContainers_Lists */ = {
 			isa = PBXGroup;
 			children = (
+				EFA93BF0288535FE0004C260 /* DynamicList-ForEach.swift */,
+				EFA93BEF288535FE0004C260 /* DynamicList-ForEachWithSections.swift */,
+				EFA93BEC288535FE0004C260 /* DynamicList-Identifiable.swift */,
+				EFA93BED288535FE0004C260 /* DynamicList-ScrollTo.swift */,
+				EFA93BEB288535FE0004C260 /* DynamicList-WithBinding.swift */,
+				EFA93BEE288535FE0004C260 /* StaticList.swift */,
 				EFA93BDC288534F00004C260 /* Test_SwiftUI_CollectionContainers_ListsApp.swift */,
 				EFA93BDE288534F00004C260 /* ContentView.swift */,
 				EFA93BE0288534F00004C260 /* Assets.xcassets */,
@@ -137,6 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA93BF7288535FE0004C260 /* DynamicList-ForEach.swift in Sources */,
+				EFA93BF3288535FE0004C260 /* DynamicList-Identifiable.swift in Sources */,
+				EFA93BF6288535FE0004C260 /* DynamicList-ForEachWithSections.swift in Sources */,
+				EFA93BF2288535FE0004C260 /* DynamicList-WithBinding.swift in Sources */,
+				EFA93BF4288535FE0004C260 /* DynamicList-ScrollTo.swift in Sources */,
+				EFA93BF5288535FE0004C260 /* StaticList.swift in Sources */,
 				EFA93BDF288534F00004C260 /* ContentView.swift in Sources */,
 				EFA93BDD288534F00004C260 /* Test_SwiftUI_CollectionContainers_ListsApp.swift in Sources */,
 			);
